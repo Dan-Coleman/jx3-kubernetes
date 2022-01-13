@@ -33,16 +33,20 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: Dan-Coleman
+    repository: jx3-kubernetes
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: jx.test
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: Dan-Coleman
   repository: bucketrepo
   secretStorage: local
   vault: {}
